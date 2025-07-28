@@ -1,4 +1,4 @@
-package com.patika.enesakturk.week01.cohort;
+package com.patika.enesakturk.week01.cohort.String;
 
 public class string {
     public static void main(String[] args) {
