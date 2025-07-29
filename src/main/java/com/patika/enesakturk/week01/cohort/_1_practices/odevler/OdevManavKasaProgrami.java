@@ -8,19 +8,25 @@ public class OdevManavKasaProgrami {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Manavda bulunan ürünlerin isimleri
+
         String Armut;
         String Elma;
         String Domates;
         String Muz;
         String Patlican;
 
+    // Manavda bulunan ürünlerin kilogram türünden fiyatları
         double ArmutFiyat = 11;
         double ElmaFiyat = 15;
         double DomatesFiyat = 9;
         double MuzFiyat = 30;
         double PatlicanFiyat = 17;
 
+        // alisveris öncesi tutar.
         double hesap = 0;
+
+        // Kullanicidan manavdan aldiklarini hesaplayip hesap degiskenine ekliyorum.
 
         System.out.print("Kaç kilo Armut aldiniz : ");
         Double Armutkilo = scanner.nextDouble();
@@ -42,6 +48,7 @@ public class OdevManavKasaProgrami {
         Double PatlicanKilo = scanner.nextDouble();
         hesap += (PatlicanKilo*PatlicanFiyat);
 
+        // Son tutari yazdiriyorum.
         System.out.println("Hesap = " + hesap);
     }
 }
