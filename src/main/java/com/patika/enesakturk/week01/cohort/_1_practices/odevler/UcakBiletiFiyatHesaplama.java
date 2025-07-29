@@ -34,6 +34,8 @@ Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %2
         System.out.println("Yolculuk tipi (Tek Yön için = 1 , Gidiş-Dönüş için = 2) : ");
         int yolculukTipi = scanner.nextInt();
 
+        // Yolculuk tipine göre indirimler uygulaniyor.
+
         if (yolculukTipi == 1 || yolculukTipi == 2){
             double fiyat = km/10;
 
