@@ -13,7 +13,10 @@ public class OdevVucutKitle {
         System.out.print("Lütfen boyunuzu giriniz : ");
         double boy = scanner.nextDouble();
 
+        // kullanicidan veri alimini kapattim.
         scanner.close();
+
+        // Vücut kitle indeksi için gereken formülü degiskene atadim.
         double vucutKitleIndeksi = kilo / ( boy * boy );
 
                 System.out.println("Vücut kitle indeksiniz :  = " + vucutKitleIndeksi);
