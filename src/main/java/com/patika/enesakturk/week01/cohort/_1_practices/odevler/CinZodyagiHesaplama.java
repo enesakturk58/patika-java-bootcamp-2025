@@ -6,9 +6,13 @@ public class CinZodyagiHesaplama {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Dogum Yilinizi Giriniz : ");
         int dogumYili = scanner.nextInt();
+
         int kalan = dogumYili % 12;
+
+        // iki alternatif yöntem hazirladim. switch case ve array.
 
         System.out.println("Switch-case ;");
         switch (kalan) {
@@ -29,13 +33,17 @@ public class CinZodyagiHesaplama {
         }
 
         System.out.println("Dizi ( Array ) ;");
-        // Bu algoritmada Dizi kullanmak daha temiz ve daha okunabilir bir yoldur.
+
+        // Bu algoritma da Dizi kullanmak daha temiz ve daha okunabilir bir yoldur.
+
+        // Dizi olusturuldu.
         String[] zodyaklar = {
                 "Maymun", "Horoz", "Köpek", "Domuz",
                 "Fare", "Öküz", "Kaplan", "Tavşan",
                 "Ejderha", "Yılan", "At", "Koyun"
         };
 
+        // Burc degeri, istenilen kalan degerini zodyaklar listesinden alıyor.
         String burc = zodyaklar[kalan];
         System.out.println("Çin Zodyağı Burcunuz: " + burc);
     }
