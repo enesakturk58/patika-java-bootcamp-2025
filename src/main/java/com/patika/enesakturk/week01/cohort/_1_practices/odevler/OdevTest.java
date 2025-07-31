@@ -3,43 +3,28 @@ package com.patika.enesakturk.week01.cohort._1_practices.odevler;
 import java.util.Scanner;
 
 public class OdevTest {
-    public static void main (String[] args) {
-        Scanner scanner= new Scanner(System.in);
+    public static void main(String[] args) {
 
-        while (true) {
-            System.out.print("\nBir sayı giriniz (çıkmak için 0 yazın): ");
-            int number = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in); // Kullanıcıdan Veri Almaya Gereken Komut Satırı-
 
-            // Çıkış kontrolü
-            if (number == 0) {
-                System.out.println("Programdan çıkılıyor...");
-                break;
+        // Kullanıcının Giriceği Sayı'nın Komut Satırı-
+        System.out.print("Basamak Sayısı Giriniz: ");
+        int number = scanner.nextInt();
+
+        // Her Yıldıza Boşlukları Yazdıran Komut Satırı-
+        for (int i = 1; i <= number; i++) {
+            for (int j = 0; j <= (i - 1); j++) {
+                System.out.print(" ");
             }
-
-            // Negatif sayı kontrolü
-            if (number < 0) {
-                System.out.println("Lütfen pozitif bir sayı giriniz.");
-                continue;
+            // Yıldızları Yazdıran Komut Satırı-
+            for (int k = 1; k <= 2 * (number - i) + 1; k++) {
+                System.out.print("*");
             }
-
-            int sum = 0;
-
-            // Bölenlerin toplamı hesaplanıyor
-            for (int i = 1; i <= number / 2; i++) {
-                if (number % i == 0) {
-                    sum += i;
-                }
-            }
-
-            // Mükemmel sayı kontrolü
-            if (sum == number) {
-                System.out.println(number + " bir mükemmel sayıdır.");
-            } else {
-                System.out.println(number + " bir mükemmel sayı değildir.");
-            }
+            System.out.println(); // Yeni Satıra Geçmesini Sağlıyor.
         }
-
         scanner.close();
-
     }
-}
+    }
+
+
+
