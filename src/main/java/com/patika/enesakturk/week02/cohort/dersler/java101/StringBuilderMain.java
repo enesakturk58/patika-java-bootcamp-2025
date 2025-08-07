@@ -1,4 +1,4 @@
-package com.patika.enesakturk.week02.cohort.java101;
+package com.patika.enesakturk.week02.cohort.dersler.java101;
 
 public class StringBuilderMain {
     public static void main(String[] args) {
