@@ -9,34 +9,32 @@ public class PalindromNumberExample {
         // 121 -> 121 bu sayi palindromdur.
         // 123 -> 321 bu sayi palindrom degildir.
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Lutfen bir sayi giriniz : ");
-        int number = scanner.nextInt();
+       // Scanner scanner = new Scanner(System.in);
+       // System.out.print("Lutfen bir sayi giriniz : ");
+       // int number = scanner.nextInt();
 
-        boolean isPalindromNumber = isPalindrom(number);
+        for (int i = 0; i < 1000; i++){
+            boolean isPolindromNumber = isPolindrom(i);
 
-        if (isPalindromNumber)
-            System.out.println("sayi polindromdur.");
-        else
-            System.out.println("Sayi polindrom degildir.");
+            if (isPolindromNumber) {
+                System.out.println(i + " sayisi polindromdur.");
+            }
 
-        for (int i = 1; i < number; i++){
-            boolean isPalindromNumber2 = isPalindrom(i);
-            if (isPalindromNumber2)
-                System.out.println(i + " sayisi polindrom sayidir.");
         }
 
     }
 
-    public static boolean isPalindrom(int number){
-        int originalNumber = number;
-        int reverseNumber = 0 ;
+    private static boolean isPolindrom(int number){
 
-        while (number > 0){
+        int originalNumber = number;
+        int reverseNumber = 0;
+
+        while(number > 0){
             int digit = number % 10;
-            reverseNumber = (reverseNumber * 10) + digit;
+            reverseNumber = (reverseNumber*10) + digit;
             number /= 10;
         }
+
         return originalNumber == reverseNumber;
     }
 }
